@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  nginx:
+    container_name: nginx
+    build:
+      context: .
+      dockerfile: devops/nginx/Dockerfile
+    volumes:
+        - ./:/var/www/eobuwie/
+    ports:
+        - '8003:8003'
+
+  php:
+    container_name: php
+    build:
+      context: .
+      dockerfile: devops/php/Dockerfile
+    volumes:
+        - ./:/var/www/eobuwie/
+        - ~/.gitconfig:/etc/gitconfig
+    user: 1000:1000
