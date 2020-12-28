@@ -14,6 +14,7 @@ class EmailDTO
      * @Assert\Length(min=3)
      */
     public string $name;
+
     /** @Assert\NotBlank() */
     public string $message;
 }
