@@ -14,14 +14,14 @@ While occurring problems with email provider, application will log all errors to
   * email_receiver='xxx@xxx.xx' - address email to receiver
   * MAILER_DSN= gmail://email@gmail.com:pass@default
 * login to docker container by docker-compose exec --user=root php bash then move to symfony folder (cd symfony) and run command composer install. 
-  Application should be available under localhost:8003
+  Application should be available under localhost:8003/kontakt
 
 ### Tests 
 
 login to docker container 
- * docker-compose exec php bash
+ * docker-compose exec --user=root php bash
  * cd symfony/
- * run bin/phpunit --coverage-html coverage-dir src/ - or tests/ for example
+ * run bin/phpunit --coverage-html coverage-dir tests/
 
 
 ### Cs fixer
